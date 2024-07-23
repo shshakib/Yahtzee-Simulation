@@ -53,3 +53,9 @@ You can change the number of game runs by editing the `num_games` in the `simula
 Note: The simulation run might take a long time, especially for the Markov Chain, you can remove it from the strategies list in the main, to run other strategies which shouldn't take a very long time to run.
 
 ---
+## Sources
+https://github.com/dpmerrell/yahtzee
+https://en.wikipedia.org/wiki/Yahtzee
+https://en.wikipedia.org/wiki/Markov_decision_process
+http://gunpowder.cs.loyola.edu/~jglenn/research/optimal_yahtzee.pdf
+https://www-set.win.tue.nl/~wstomv/misc/yahtzee/Yahtzee-talk-NWD.pdf
