@@ -1,21 +1,20 @@
 # Yahtzee Strategy Simulation
 
 ## Overview
-This project simulates the game of Yahtzee using different strategies. The program uses an object-oriented approach and a different class for each strategy. The main code runs simulations for each strategy, analyzes the results, and especially in the Markov chain case saves the simulation data for further use.
+This project simulates the game of Yahtzee using different strategies. The program uses an object-oriented approach and a different class for each strategy. The main code runs simulations for each strategy, analyzes the results, and saves the simulation data for further use.
 
 ## Structure
 
 ### Main Code
-The main code **Simulates Games** which runs a specified number of games for each strategy. Then it will **Analyze Results** by calculating and printing the average score for each strategy. It also handles **Saves/Loads Results** for future use especially for Markov chain strategy.
+The main code **Simulates Games** which runs a specified number of games for each strategy. Then it will **Analyze Results** by calculating and printing the average score for each strategy. It also handles **Saves/Loads Results** for future uses.
 
 ### Strategies
 The following strategies are implemented:
 1. **Greedy Strategy**: Considers current state to gain the most out of it by keeping dice with the highest frequency.
 2. **Heuristic Strategy**: Uses predefined rules.
-3. **Markov Chain Strategy**: Uses Monte Carlo and iteration to decide the best moves.
-4. **Maximize Yahtzees Strategy**: Keeping the dice that match the value of our first roll trying to maximize Yahtzee
-5. **Probabilistic Strategy**: Keeps the dice with the highest frequency to maximize the chances of high-value combinations.
-6. **Rational Yahtzees Strategy**: Like the Probabilistic Strategy but also considers other combinations.
+3. **Maximize Yahtzees Strategy**: Keeping the dice that match the value of our first roll trying to maximize Yahtzee
+4. **Probabilistic Strategy**: Keeps the dice with the highest frequency to maximize the chances of high-value combinations.
+5. **Rational Yahtzees Strategy**: Like the Probabilistic Strategy but also considers other combinations.
 
 ### Other Classes
 - **Dice**: Handles the rolling and keeping of dice.
@@ -50,12 +49,10 @@ Standard Deviation: 32.08900976829918
 
 ## Customizing the Simulation
 You can change the number of game runs by editing the `num_games` in the `simulate_games` function call.
-Note: The simulation run might take a long time, especially for the Markov Chain, you can remove it from the strategies list in the main, to run other strategies which shouldn't take a very long time to run.
 
 ---
 ## Sources
 https://github.com/dpmerrell/yahtzee
 https://en.wikipedia.org/wiki/Yahtzee
-https://en.wikipedia.org/wiki/Markov_decision_process
 http://gunpowder.cs.loyola.edu/~jglenn/research/optimal_yahtzee.pdf
 https://www-set.win.tue.nl/~wstomv/misc/yahtzee/Yahtzee-talk-NWD.pdf
