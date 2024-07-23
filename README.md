@@ -48,11 +48,6 @@ Standard Deviation: 32.08900976829918
 ...
 ```
 
-## Saving and Loading Results
-The results are saved in `.pkl` files for each strategy, with the focus on the Markov chain. These files can be loaded to avoid re-running simulations, which saves time when analyzing results. Since the file size has exceeded the limit, you can find them in the following link.
-
-https://gtvault-my.sharepoint.com/:f:/g/personal/sshakib6_gatech_edu/EssFkFFKoxZHsp4mLkuke1UBA8Xw7TK9pgFktHUWSNHgTg?e=xGVXDl
-
 ## Customizing the Simulation
 You can change the number of game runs by editing the `num_games` in the `simulate_games` function call.
 Note: The simulation run might take a long time, especially for the Markov Chain, you can remove it from the strategies list in the main, to run other strategies which shouldn't take a very long time to run.
