@@ -1,1 +1,60 @@
-# Yahtzee-Simulation
+# Yahtzee Strategy Simulation
+
+## Overview
+This project simulates the game of Yahtzee using different strategies. The program uses an object-oriented approach and a different class for each strategy. The main code runs simulations for each strategy, analyzes the results, and especially in the Markov chain case saves the simulation data for further use.
+
+## Structure
+
+### Main Code
+The main code **Simulates Games** which runs a specified number of games for each strategy. Then it will **Analyze Results** by calculating and printing the average score for each strategy. It also handles **Saves/Loads Results** for future use especially for Markov chain strategy.
+
+### Strategies
+The following strategies are implemented:
+1. **Greedy Strategy**: Considers current state to gain the most out of it by keeping dice with the highest frequency.
+2. **Heuristic Strategy**: Uses predefined rules.
+3. **Markov Chain Strategy**: Uses Monte Carlo and iteration to decide the best moves.
+4. **Maximize Yahtzees Strategy**: Keeping the dice that match the value of our first roll trying to maximize Yahtzee
+5. **Probabilistic Strategy**: Keeps the dice with the highest frequency to maximize the chances of high-value combinations.
+6. **Rational Yahtzees Strategy**: Like the Probabilistic Strategy but also considers other combinations.
+
+### Other Classes
+- **Dice**: Handles the rolling and keeping of dice.
+- **Player**: Manages the player's scorecard, dice, and strategy, and plays turns accordingly.
+- **ScoreCard**: Tracks the scores for various categories in Yahtzee.
+
+## Running the Simulation
+To run the simulation ensure you have all dependencies installed: such as NumPy, Matplotlib, and then run the main code main.py. The main code will:
+- Test each strategy by simulating a series of games.
+- Print the average score for each strategy.
+- Load or save the results to a file.
+
+### Example Output
+```plaintext
+Testing strategy: HeuristicStrategy
+Average Score: 121.4257
+Standard Deviation: 27.322903936258314
+
+Testing strategy: MaximizeYahtzees
+Average Score: 144.6301
+Standard Deviation: 32.95189636409413
+
+Testing strategy: RationalYahtzeesStrategy
+Average Score: 124.5453
+Standard Deviation: 32.08900976829918
+.
+.
+.
+
+...
+```
+
+## Saving and Loading Results
+The results are saved in `.pkl` files for each strategy, with the focus on the Markov chain. These files can be loaded to avoid re-running simulations, which saves time when analyzing results. Since the file size has exceeded the limit, you can find them in the following link.
+
+https://gtvault-my.sharepoint.com/:f:/g/personal/sshakib6_gatech_edu/EssFkFFKoxZHsp4mLkuke1UBA8Xw7TK9pgFktHUWSNHgTg?e=xGVXDl
+
+## Customizing the Simulation
+You can change the number of game runs by editing the `num_games` in the `simulate_games` function call.
+Note: The simulation run might take a long time, especially for the Markov Chain, you can remove it from the strategies list in the main, to run other strategies which shouldn't take a very long time to run.
+
+---
